@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Glitcho</title>
+
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/stilo.css">
+    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script src="js/glitch-canvas-with-polyfills.js"></script>
+    <script src="js/sortpixels.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div id="cargando">CARGANDO</div>
+    <div class="container">
+        <div id="c_cabecera">
+            <div id="d_titulo"><h1>Glitcho</h1></div>
+            <div id="d_descripcion"><p>Es una aplicación web en el entorno cliente, sube imágenes y áñadele efectos glitch, todo sin salir del navegador, cuando estés tranquilo con el resultado mantén pulsada la image, o guárdala con botón derecho</p></div>
+        </div>
+        <div id="c_panel">
+            <!-- Primer panel para subir imagen -->
+            <div id="d_subir_foto">
+                <div id="r_sf" onclick="llamar_input();">
+                    <h1 id="h1_si" onclick="llamar_input();">Clicquea para subir imagen</h1>
+                    <input type="file" id="i_subida" onchange="subir_imagen();">
+                </div>
+            </div>
+            <!-- Segundo panel para recortar imagen OPCIONAL en 0.1-->
+            <div id="d_recortar">
+
+            </div>
+            <!-- Tercer panel para procesar la imagen -->
+            <div id="d_procesar">
+                <img id="img_resultado" src="">
+            </div>
+        </div>
+        <div id="c_menu_bajo">
+            <div id="d_menu_recortar">
+
+            </div>
+            <div class="m_container" id="d_menu_procesar">
+                <div class="m_boton" id="d_glitch" onclick="g_imagen();">
+                    <h2 >Glitch</h2>
+                </div>
+                <div class="m_boton" id="d_sort" onclick="s_imagen();">
+                    <h2>Sorting</h2>
+                </div>
+                <div class="m_boton" id="d_reset" onclick="window.location.reload(false)">
+                    <h2>Reset</h2>
+                </div>
+            </div>
+        </div>
+        <footer id="abajo">(c)2016, Jaime Rodríguez<br>Check main.js for licenses</footer>
+    </div>
+</body>
+</html>

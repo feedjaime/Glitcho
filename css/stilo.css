@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    font-family: monospace;
+}
+
+input, #cargando, #d_recortar, #d_procesar, #d_menu_procesar {
+    display: none;
+}
+
+#cargando {
+    position: fixed;
+    background-color: black;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+.container {
+    width: 100%;
+}
+
+#c_cabecera, #d_subir_foto {
+    display: inline;
+    text-align: center;
+
+    font-family: Inconsolata, monospace;
+
+}
+
+#c_cabecera h1 {
+    color: white;
+    font-family: VT323, monospace;
+    font-size: 6em;
+}
+
+#c_cabecera p{
+    color: white;
+    font-family: Inconsolata, monospace;
+    font-size: 18pt;
+    padding: 20px;
+
+}
+
+#r_sf {
+    width: 100%;
+    padding-top: 40%;
+    padding-bottom: 40%;
+    font-family: monospace;
+
+    background-color: azure;
+}
+
+#d_subir_foto h1{
+    position: relative;
+    vertical-align: middle;
+}
+
+#d_procesar {
+    width: 100%;
+
+    background-color: darkblue;
+}
+
+#d_procesar img{
+    width: 100%;
+}
+
+.m_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.m_boton {
+    display: inline-flex;
+    flex: auto;
+    font-family: monospace;
+    font-size: 2em;
+    text-align: center;
+    vertical-align: middle;
+
+    background-color: aliceblue;
+}
+
+.m_boton h2{
+    margin: auto;
+    text-align: center;
+    position: relative;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
+
+}
+
+footer {
+    text-align: center;
+    color: white;
+}
