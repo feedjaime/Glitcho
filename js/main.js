@@ -67,13 +67,18 @@ function subir_imagen() {
     lector.onloadend = function() {
         img_subida.src = lector.result;
         img_final.src = img_subida.src;
+
+        img_subida.onload = function () {
+            console.log("Imagen cargada con éxito");
+            c_alfa.width = img_subida.width;
+            c_alfa.height = img_subida.height;
+        }
         toggle_a( div_subir, div_procesar );
         $("#d_menu_procesar").css("display", "flex");
         console.log("Imagen subida con éxito: " + img_subida.width + ',' + img_subida.height);
 		
         //Compatibilidad con Firefox
-		c_alfa.width = img_subida.width;
-		c_alfa.height = img_subida.height;
+
 		
         subir_canvas(c_alfa,img_subida);
     }
