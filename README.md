@@ -4,8 +4,9 @@ In-browser webapp for glitching images, currently in spanish.
 These are the browsers and their current support:
 * Chrome 52.0.27
 * Opera 38.0
-* ~~Safari~~
-* ~~Firefox~~
+* Safari Techonology Preview Release 11 
+* ~~Safari 9.1.2~~
+* Firefox 42.0
 
 #Libraries used
 This webapp uses jQuery, glitch-canvas and sortpixels.js all under MIT license
