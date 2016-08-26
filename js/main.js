@@ -69,18 +69,13 @@ function subir_imagen() {
         img_final.src = img_subida.src;
 
         img_subida.onload = function () {
-            console.log("Imagen cargada con éxito");
+            console.log("Imagen cargada con éxito: " + img_subida.width + ',' + img_subida.height);
             c_alfa.width = img_subida.width;
             c_alfa.height = img_subida.height;
+            subir_canvas(c_alfa,img_subida);
         }
         toggle_a( div_subir, div_procesar );
         $("#d_menu_procesar").css("display", "flex");
-        console.log("Imagen subida con éxito: " + img_subida.width + ',' + img_subida.height);
-		
-        //Compatibilidad con Firefox
-
-		
-        subir_canvas(c_alfa,img_subida);
     }
 
     if (documento) {
