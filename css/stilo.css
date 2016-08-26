@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    color: white;
 }
 
 body {
@@ -61,6 +62,7 @@ input, #cargando, #d_recortar, #d_procesar, #d_menu_procesar {
 #d_subir_foto h1{
     position: relative;
     vertical-align: middle;
+    color: black;
 }
 
 #d_procesar {
@@ -93,6 +95,7 @@ input, #cargando, #d_recortar, #d_procesar, #d_menu_procesar {
 
 .m_boton h2{
     margin: auto;
+    color: black;
     text-align: center;
     position: relative;
     padding-left: 1em;
@@ -110,4 +113,29 @@ input, #cargando, #d_recortar, #d_procesar, #d_menu_procesar {
 footer {
     text-align: center;
     color: white;
+}
+
+#d_glitch {
+    background-color: #FF094D;
+}
+
+#d_glitch :hover {
+    background-color: #E50845;
+}
+
+#d_sort {
+    background-color: #009BCC;
+}
+
+#d_sort :hover {
+    background-color: #0088B2;
+}
+
+#d_reset {
+    background-color: #FFED00;
+}
+
+
+#d_reset :hover {
+    background-color: #E5D500;
 }

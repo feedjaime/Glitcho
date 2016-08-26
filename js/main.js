@@ -70,6 +70,11 @@ function subir_imagen() {
         toggle_a( div_subir, div_procesar );
         $("#d_menu_procesar").css("display", "flex");
         console.log("Imagen subida con éxito: " + img_subida.width + ',' + img_subida.height);
+		
+        //Compatibilidad con Firefox
+		c_alfa.width = img_subida.width;
+		c_alfa.height = img_subida.height;
+		
         subir_canvas(c_alfa,img_subida);
     }
 
@@ -86,10 +91,12 @@ function subir_imagen() {
 //Subir a canvas FUNCIONA
 function subir_canvas (canvas_a,img_a) {
     var cactx = canvas_a.getContext('2d');
-    console.log("Transfir imagen a canvas alfa");
+    
     //Convertir canvas a tamaño de imagen
     canvas_a.width = img_a.width;
     canvas_a.height = img_a.height;
+	
+	console.log("Transfir imagen a canvas alfa");
     //Imprimir imagen
     cactx.drawImage(img_a,0,0);
 
@@ -102,7 +109,7 @@ function subir_img (img_a,canvas_a) {
 
 //Glitchear
 function g_imagen() {
-    var dat_imagen = ctx_alfa.getImageData( 0, 0, c_alfa.width, c_alfa.height);
+    var dat_imagen = ctx_alfa.getImageData( 0, 0, c_alfa.width, c_alfa.height);	//Problemas con Safari y Firefox
     //Parametros para glitcheado random
     var raiz_s = Math.floor((Math.random() * 100) + 1); //Seed 0-100
     var raiz_q = Math.floor((Math.random() * 99) + 1);  //Quality 0-99
@@ -121,7 +128,8 @@ function g_imagen() {
         .then (function (dataURL) {
             img_glitch.src = dataURL;
             console.log("Imagen glitcheada con seed: " + raiz_s + ", quality: " + raiz_q + ", interactions: " + raiz_i + " ,amount: " + raiz_a);
-            efectos(c_beta, img_glitch);
+            img_final.src = img_glitch.src; //Works with Safari
+            //efectos(c_beta, img_glitch);
 
             cargando(0);
         })
