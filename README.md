@@ -5,7 +5,8 @@ These are the browsers and their current support:
 * Chrome 52.0.27
 * Opera 38.0
 * Safari Techonology Preview Release 11 
-* ~~Safari 9.1.2~~
+* Safari 9.1.2
+* Safari for iOS
 * Firefox 42.0
 
 #Libraries used
